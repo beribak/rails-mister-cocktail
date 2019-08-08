@@ -1,0 +1,10 @@
+<div class="container text-center bg-dark text-white p-3">
+  <%= form_for(@cocktail) do |f| %>
+    <div class="form-group">
+      <h3><%= f.label :name %></h3>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>
