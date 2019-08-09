@@ -6,7 +6,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-4 text-white">
         <div class="card bg-dark my-2 p-3">
-          <img class="card-img-top" src="https://picsum.photos/200/100" alt="Card image cap">
+          <%= cl_image_tag cocktail.photo.url height: 100%>
           <h3><%= cocktail.name %></h3>
             <% cocktail.doses.each do |dose| %>
             <p><%= dose.ingredient.name %></p>
