@@ -12,8 +12,14 @@ Ingredient.create(name: "khalua")
 Ingredient.create(name: "salt")
 Ingredient.create(name: "liquer")
 
-cocktail = Cocktail.create(name: "chocolate shake")
-dose = Dose.create(description: "sweet drink")
-dose.cocktail = cocktail
-dose.ingredient = Ingredient.all.sample
-dose.save
+#cocktail = Cocktail.create(name: "chocolate shake")
+#dose = Dose.create(description: "sweet drink")
+#dose.cocktail = cocktail
+#dose.ingredient = Ingredient.all.sample
+#dose.save
+
+#cocktail1 = Cocktail.create(name: "shake")
+#dose1 = Dose.create(description: "drink")
+#dose1.cocktail = cocktail1
+#dose1.ingredient = Ingredient.all.sample
+#dose1.save

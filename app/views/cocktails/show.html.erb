@@ -1,14 +1,25 @@
-<div class="container text-center bg-dark text-white p-3">
-  <h2><%= @cocktail.name %></h2>
-  <% @cocktail.doses.each do |dose| %>
-    <h4><%= dose.description %></h4>
-    <h4><%= dose.ingredient.name %></h4>
-    <h3 class="btn btn-secondary">
-      <%= link_to 'Remove', cocktail_dose_path(dose), method: :delete %>
-    </h3>
-  <% end %>
-  <h3 class="btn btn-secondary">
+<div class="container text-center text-white bg-light p-3">
+  <h2 class="bg-dark"><%= @cocktail.name %></h2>
+  <div class="container">
+    <div class="row">
+      <% @cocktail.doses.each do |dose| %>
+        <div class="col-4">
+          <div class="bg-primary text-white card p-3">
+            <h4><%= dose.description %></h4>
+            <h4><%= dose.ingredient.name %></h4>
+            <h3 class="btn btn-dark">
+              <%= link_to 'Remove', dose_path(dose), method: :delete %>
+            </h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <h3 class="btn btn-dark">
     <%= link_to 'Menu', cocktails_path %>
+  </h3>
+  <h3 class="btn btn-dark">
+      <%= link_to 'Remove cocktail', cocktail_path(@cocktail), method: :delete %>
   </h3>
 </div>
 
